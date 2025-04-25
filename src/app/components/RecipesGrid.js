@@ -9,6 +9,8 @@ const RecipesGrid = () => {
         <RecipeCard/>
         <RecipeCard/>
         <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
     
     </div>
   )

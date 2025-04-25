@@ -23,6 +23,10 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  background-color: lemonchiffon;
+  background-image: linear-gradient(90deg, transparent 50%, rgba(240, 230, 140, .5) 50%);
+  background-size: 50px 50px;
+
 }
 
 .nav_container, .footer_container{
@@ -33,7 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0.5em 50px;
 }
 
 .nav_container ul{
@@ -43,11 +47,29 @@ body {
   gap:20px;
 }
 
+h1{
+  font-size: 2em;
+}
+
 .footer_container{
   display: flex;
   justify-content: space-between;
   padding: 0 50px;
   height: 50px;
+}
+
+.home_container{
+  text-align: center;
+  padding: 2em 0;
+}
+
+.home_container h2{
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+h2{
+  font-size: 2.5em;
 }
 
 .recipes_grid{
@@ -65,9 +87,33 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: green;
+  color:white;
+  padding: 1em;
+  border: 0.25em solid white;
+  font-size: 1.25em;
+  border-radius: 5em;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0,0.5);
+  gap:5px;
+}
+
+.recipe_card img{
+  border-radius: 7em;
+}
+
+.recipe_card a{
+  font-size: 0.80em;
+  background-color: firebrick;
+  border: 2px solid white;
+  padding: 0.5em;
+  border-radius: 1em;
 }
 
 .hero_image{
+  text-align: center;
+  padding:4em 0;
+}
+
+.hero_image, .home_container{
   color:black;
-  background: linear-gradient(to top, rgba(139, 130, 0, 0.799), rgba(191, 198, 6, 0.755)), url(/assets/images/brooke-lark-HlNcigvUi4Q-unsplash.jpg) no-repeat bottom center;
 }
