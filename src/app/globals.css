@@ -8,8 +8,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +36,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5em 50px;
+  gap:2em;
+  border-bottom: 0.25em solid white;
 }
 
 .nav_container ul{
@@ -47,6 +47,11 @@ body {
   gap:20px;
 }
 
+.nav_container a:hover{
+  text-decoration-line: underline;
+    text-decoration-style: dotted;
+}
+
 h1{
   font-size: 2em;
 }
@@ -54,8 +59,12 @@ h1{
 .footer_container{
   display: flex;
   justify-content: space-between;
-  padding: 0 50px;
-  height: 50px;
+  padding: 0.8em 50px;
+}
+
+.footer_container ul{
+  display: flex;
+  gap: 1em;
 }
 
 .home_container{
@@ -63,19 +72,20 @@ h1{
   padding: 2em 0;
 }
 
-.home_container h2{
-  margin-bottom: 1em;
-  font-size: 1.5em;
+h2{
+  font-size: 3em;
 }
 
-h2{
-  font-size: 2.5em;
+h2:not(.hero_image h2){
+  color:darkgreen;
+  margin-bottom: 0.5em;
+  font-size: 3em;
 }
 
 .recipes_grid{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap:40px;
+  gap:2em;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 6em;
@@ -87,11 +97,11 @@ h2{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: green;
+  background-color: forestgreen;
   color:white;
   padding: 1em;
   border: 0.25em solid white;
-  font-size: 1.25em;
+  font-size: 1.5em;
   border-radius: 5em;
   box-shadow: 5px 5px 5px rgba(0, 0, 0,0.5);
   gap:5px;
@@ -102,16 +112,23 @@ h2{
 }
 
 .recipe_card a{
-  font-size: 0.80em;
+  font-size: 0.70em;
   background-color: firebrick;
-  border: 2px solid white;
-  padding: 0.5em;
-  border-radius: 1em;
+  border: 2px solid darkgreen;
+  padding: 0.50em;
+  border-radius: 2em;
+  transition: background-color 0.5s, font-size 0.5s, color 0.5s;
+}
+
+.recipe_card a:hover{
+  background-color: khaki;
+  color: black;
 }
 
 .hero_image{
   text-align: center;
   padding:4em 0;
+  background-color: goldenrod;
 }
 
 .hero_image, .home_container{
