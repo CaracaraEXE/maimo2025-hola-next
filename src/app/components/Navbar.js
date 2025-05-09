@@ -1,11 +1,16 @@
 import Image from "next/image"
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  //acá van cosas JS
+
+  const {title, year} = props;
+
   return (
     <div className="nav_container">
         <Image src="/assets/chefhat.svg" width={50} height={50} alt="Chef Hat Logo"/>
-        <h1>Jason&apos;s Recipes</h1>
+        <h1>{title} {year}</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>

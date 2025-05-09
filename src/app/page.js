@@ -1,24 +1,20 @@
-import Image from "next/image";
-
-const title = "OLDENAI";
-
-const dia = "Jueves";
-
 import Navbar from "@/app/components/Navbar.js";
 import Footer from "@/app/components/Footer.js";
 import HomeContainer from "@/app/components/HomeContainer.js";
-import HeroImage from "./components/HeroImage";
-import { Itim } from "next/font/google"
-
-const Itimfont = Itim({
-  subsets:["latin"],
-  weight:"400",
-})
+import HeroImage from "@/app/components/HeroImage"
+import ClimaData from "./ClimaData";
 
 export default function Home() {
+
+   const climas = [
+        {temperatura:16,pais:"Argentina"},
+        {temperatura:30,pais:"Brazil"},
+         {temperatura:18,pais:"Uruguay"},
+    ];
+
   return (
-    <div className={`${Itimfont.className}`}>
-      <Navbar />
+    <div>
+      <Navbar title="Jason's recipes" year={2025}/>
       <HeroImage/>
       <HomeContainer/>
       <Footer />

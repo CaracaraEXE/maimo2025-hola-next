@@ -1,15 +1,19 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cherry_Bomb_One, Itim } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const CBOfont = Cherry_Bomb_One({
+  variable: "--font-cbo",
+  subsets:["latin"],
+  weight:"400",
+})
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const itimFont = Itim({
+  variable: "--font-itim",
   subsets: ["latin"],
-});
+  weight: "400",
+}
+)
 
 export const metadata = {
   title: "Create Next App",
@@ -20,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${itimFont.variable} ${CBOfont.variable} antialiased`}
       >
         {children}
       </body>

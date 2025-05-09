@@ -1,6 +1,8 @@
 import RecipeCard from "./RecipeCard"
+import parsedData from "@/data/recipes"
 
 const RecipesGrid = () => {
+
   return (
     <div className="recipes_grid">
         <RecipeCard/>
