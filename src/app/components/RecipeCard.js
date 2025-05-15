@@ -1,14 +1,14 @@
 import Image from "next/image"
 
-const RecipeCard = () => {
+const RecipeCard = ({image, name}) => {
   return (
     <div className='recipe_card'>
     <Image 
-      src="/assets/pomerania.jpg"
-      width={250}
-      height={250} //LOS 4 SON OBLIGATORIOS
-      alt="Pomerania"/>
-    <h3>Sample Name</h3>
+      src={image}
+      width={300}
+      height={300} //LOS 4 SON OBLIGATORIOS
+      alt={name}/>
+    <h3>{name}</h3>
     <a href="#">Ver Más</a>
         </div>
   )

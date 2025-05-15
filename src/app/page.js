@@ -2,7 +2,6 @@ import Navbar from "@/app/components/Navbar.js";
 import Footer from "@/app/components/Footer.js";
 import HomeContainer from "@/app/components/HomeContainer.js";
 import HeroImage from "@/app/components/HeroImage"
-import ClimaData from "./ClimaData";
 
 export default function Home() {
 
