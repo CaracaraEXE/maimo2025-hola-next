@@ -6,7 +6,7 @@ const RecipeCard = ({image, name}) => {
     <Image 
       src={image}
       width={300}
-      height={300} //LOS 4 SON OBLIGATORIOS
+      height={300} //LOS 4 SON OBLIGATORIOS hewwwoooo
       alt={name}/>
     <h3>{name}</h3>
     <a href="#">Ver Más</a>
