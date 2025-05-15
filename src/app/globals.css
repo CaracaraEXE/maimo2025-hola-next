@@ -12,13 +12,6 @@
   --font-cbo: var(--font-cbo);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -32,6 +25,7 @@ body {
 
 .nav_container, .footer_container{
   background-color: darkgreen;
+  color:white;
 }
 
 .nav_container{
@@ -141,3 +135,17 @@ h2:not(.hero_image h2){
 .hero_image, .home_container{
   color:black;
 }
+
+@media screen and (max-width: 800px) {
+    .recipe_card{
+  grid-column: span 6;
+    }
+    
+    h1{
+        font-size: 1em;
+    }
+
+    .hero{
+        padding: 3em;
+    }
+  }
