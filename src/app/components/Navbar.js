@@ -3,8 +3,6 @@ import Image from "next/image"
 
 const Navbar = (props) => {
 
-  //acá van cosas JS
-
   const {title, year} = props;
 
   return (
@@ -19,8 +17,6 @@ const Navbar = (props) => {
             </ul>
         </nav>
     </div>
-    //CLASS NO EXISTE EN REACT, SINO CLASSNAME
-    //Nuestro JSX. El JSX solo puede tener un elemento padre, no puede haber hermanos. No puede ver dos DIVS a la misma altura, sino un DIV que encierre a dos DIVS.
   );
 };
 
