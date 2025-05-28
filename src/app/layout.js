@@ -1,5 +1,7 @@
 import { Cherry_Bomb_One, Itim } from "next/font/google";
 import "./globals.css";
+import Navbar from '@/app/components/Navbar.js'
+import Footer from '@/app/components/Footer.js'
 
 const CBOfont = Cherry_Bomb_One({
   variable: "--font-cbo",
@@ -26,7 +28,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${itimFont.variable} ${CBOfont.variable} antialiased`}
       >
+        <Navbar title="Jason's recipes" year={2025}/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

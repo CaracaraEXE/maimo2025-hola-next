@@ -136,6 +136,13 @@ h2:not(.hero_image h2){
   color:black;
 }
 
+recipe
+
+.ing_Container li{
+  list-style-type: disc;
+  margin-left: 2em;
+}
+
 @media screen and (max-width: 800px) {
     .recipe_card{
   grid-column: span 6;
