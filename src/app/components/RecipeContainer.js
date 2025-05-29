@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from "next/link"
+import LoadingIcon from './LoadingIcon';
 
 const RecipeContainer = ({id}) => {
 
@@ -30,9 +31,9 @@ const RecipeContainer = ({id}) => {
 
 
   return (
-    <div className='recipe_container'>
+    <div className='recipe_body'>
         {!loading && 
-            <>
+            <div className='recipe_container'>
             <Link href="/" className='return_link'>Go Back</Link>
             <div className='recipe_header'>
                 <section className='image_header'>
@@ -77,10 +78,10 @@ const RecipeContainer = ({id}) => {
                     }
                     </ol>
                 </section>
-            </>
+            </div>
     }
 
-     {loading && "Cargando..."}
+     {loading && <LoadingIcon/>}
 
      {error && "¡No se pudo cargar la receta!"}
     </div>

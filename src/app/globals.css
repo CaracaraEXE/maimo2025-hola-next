@@ -110,7 +110,7 @@ h1{
 .recipe_card a{
   font-size: 0.70em;
   background-color: firebrick;
-  border: 2px solid darkgreen;
+  border: 2px solid #006300;
   padding: 0.50em;
   border-radius: 2em;
 }
@@ -135,12 +135,16 @@ h1{
 
 /*RECIPE CSS*/
 
+.recipe_body svg{
+  width: 5%;
+}
+
 .recipe_container{
   background-color: forestgreen;
   color: white;
-  margin: 2.5em auto;
   border-radius: 2em;
   display: flex;
+  margin: 2.5em auto;
   align-items: center;
   flex-direction: column;
   width: fit-content;

@@ -4,6 +4,8 @@ import {useState, useEffect} from 'react';
 
 import RecipeCard from "./RecipeCard";
 import axios from 'axios';
+import LoadingIcon from './LoadingIcon';
+
 
 const RecipesGrid = () => {
 
@@ -43,7 +45,7 @@ const RecipesGrid = () => {
       ))
     }
 
-    {loading && "Cargando..."}
+    {loading && <LoadingIcon/>}
     
     {error && "HUBO UN ERROR"}
     </div>
