@@ -3,6 +3,7 @@ import React from 'react'
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from "next/link"
 
 const RecipeContainer = ({id}) => {
 
@@ -18,7 +19,7 @@ const RecipeContainer = ({id}) => {
                 setRecipeData(responseData);
                 setLoading(false);
             } catch(error){
-                console.log("Fuck you lol");
+                setError(true);
             }
         }
 
@@ -32,26 +33,56 @@ const RecipeContainer = ({id}) => {
     <div className='recipe_container'>
         {!loading && 
             <>
-            <h1>{recipeData.name}</h1>
-            <Image 
-            src={recipeData.image}
-            width={300}
-            height={300}
-            alt={recipeData.name}/>
+            <Link href="/" className='return_link'>Go Back</Link>
+            <div className='recipe_header'>
+                <section className='image_header'>
+                <h1>{document.title = recipeData.name}</h1>
+                <Image 
+                src={recipeData.image}
+                width={300}
+                height={300}
+                alt={recipeData.name}/>
+                </section>
 
-            <div className='ing_Container'>
-                <ul>
-                    {
-                    recipeData.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
-                    ))
-                }
-                    </ul>
+                <div className='side_bar'>
+                    <h2>Ingredients</h2>
+                    <ul>
+                        {
+                        recipeData.ingredients.map((ingredient, index) => (
+                            <li key={index}>{ingredient}</li>
+                        ))
+                    }
+                        </ul>
+
+                    <p>Difficulty: {recipeData.difficulty}</p>
+
+                    <div className='tag_container'>
+                        <p>TAGS:</p>
+                        {
+                            recipeData.tags.map((tag, index) =>
+                            (
+                                <span key={index} className='recipe_tag'>{tag}</span>
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
+             <section className='how_to'>
+                    <h2>How To</h2>
+                    <ol>
+                    {
+                        recipeData.instructions.map((step, index) => (
+                            <li key={index}>{step}</li>
+                        ))
+                    }
+                    </ol>
+                </section>
             </>
     }
 
      {loading && "Cargando..."}
+
+     {error && "¡No se pudo cargar la receta!"}
     </div>
   )
 }
